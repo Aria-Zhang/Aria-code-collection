@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Menu</title>
+		<h1 style="font-size:200%;font-family:verdana;letter-spacing:0.3em;">
+			Z.O.O
+		</h1>
+	<style>
+		.header{
+			font-size:70%;
+			letter-spacing:0.3em;
+			word-spacing:3em;
+			text-align:center;
+			text-shadow:1px 1px #f2f2f2;
+			color:black;
+			font-family:verdana;	
+		}
+		a:link, a:visited{
+			text-decoration:none;
+			color:black;
+		}
+		a:hover{
+			color:green;
+		}
+
+		.sub{
+			color:green;
+		}
+
+	</style>
+	<div class="header">
+	<h1><b><a href="home.html">Home</a></b> <b><a href="list.html">List</a></b> <b><a href="erandeer.html">ER&EER</a></b> <b><a href="physical.html">PhysicalDatabaseDesign</a></b> <b><a href="normalization.html">Normalization</a></b> <b><a href="aboutus.html">AboutUs</a></b> <b><a href="Login.html">Login</a></b></h1>
+	</div>
+	</head>
+	<body style = "margin:30px">
+		<hr/>
+		<h3>Attribute List</h3>
+		<p>Green text indicates the subclass.</p>
+		<ul>
+			<li>Employee
+				<ul>
+					<li>Name
+						<ul>
+							<li>First name</li>
+							<li>Middle name</li>
+							<li>Last name</li>
+						</ul>
+					</li>
+					<li>Birthday
+						<ul>
+							<li>Year</li>
+							<li>Month</li>
+							<li>Day</li>
+						</ul>
+					</li>
+					<li>Address
+						<ul>
+							<li>Street name</li>
+							<li>Street number</li>
+							<li>Postal code</li>
+						</ul>
+					</li>
+					<li>Contact information
+						<ul>
+							<li>Email</li>
+							<li>Phone number</li>
+						</ul>
+					</li>
+					<li>Salary</li>
+					<li>Age (derived)</li>
+					<li>Gender</li>
+					<li>ID (key)</li>
+					<li>Job Type</li>
+					<li class="sub">Trainer
+						<ul>
+							<li>DeptinCharge</li>
+						</ul>
+					</li>
+					<li class="sub">Security
+						<ul>
+							<li>AnimalinCharge</li>
+						</ul>
+					</li>
+					<li class="sub">Technican
+						<ul>
+							<li>AreainCharge</li>
+						</ul>
+					</li>
+					<li class="sub">Cleaner
+						<ul>
+							<li>CleanArea</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Animal
+				<ul>
+					<li>Name</li>
+					<li>Age</li>
+					<li>Sex</li>
+					<li>Speciese</li>
+					<li>Preference (multivalued)
+						<ul>
+							<li>Diet</li>
+							<li>Environment</li>
+						</ul>
+					</li>
+					<li>Domain</li>
+					<li>Quantity (direved)</li>
+					<li>ID (key)</li>
+					<li class="sub">Africa
+						<ul>
+							<li>AfricanCountry</li>
+						</ul>
+					</li>
+					<li class="sub">America
+						<ul>
+							<li>AmericanCountry</li>
+						</ul>
+					</li>
+					<li class="sub">Australasia
+						<ul>
+							<li>Aus_Area</li>
+						</ul>
+					</li>
+					<li class="sub">Canada Domain
+						<ul>
+							<li>province</li>
+						</ul>
+					</li>
+					<li class="sub">Indo-Malaya
+						<ul>
+							<li>IM_Area</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Department
+				<ul>
+					<li>Department code (key)</li>
+					<li>Phone</li>
+				</ul>
+			</li>
+			<li>Service
+				<ul>
+					<li>Opening hours (multivalued)</li>
+					<li>Phone number</li>
+					<li>Service number (key)</li>
+					<li class="sub">Camping
+						<ul>
+							<li>CampingArea</li>
+						</ul>
+					</li>
+					<li class="sub">Gift shop
+						<ul>
+							<li>RouteName</li>
+						</ul>
+					</li>
+					<li class="sub">Scenic Safari Drive thru
+						<ul>
+							<li>location</li>
+						</ul>
+					</li>
+					<li  class="sub">walking route
+						<ul>
+							<li>driveRoute</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Visitor
+				<ul>
+					<li>Name
+						<ul>
+							<li>First name</li>
+							<li>Middle name</li>
+							<li>Last name</li>
+						</ul>
+					</li>
+					<li>ID (key)</li>
+					<li>Age (derived)</li>
+				</ul>
+			</li>
+			<li>Payment method</li>
+				<ul>
+					<li class="sub">Cash
+						<ul><li>amount</li></ul>
+					</li>
+					<li class="sub">Credit
+						<ul><li>creditID</li></ul>
+					</li>
+					<li class="sub">Debit
+						<ul><li>debit_ID</li></ul>
+					</li>
+				</ul>
+			<li>Ticket (weak entity)
+				<ul>
+					<li>price</li>
+					<li>overdue date
+						<ul>
+							<li>Day</li>
+							<li>Month</li>
+							<li>Year</li>
+						</ul>
+					</li>
+					<li>Type</li>
+					<li>Ticket ID (key)</li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+
+</html>
